@@ -1,0 +1,4 @@
+/*delete inactive user profiles for additional speed in instance*/
+var gr = new GlideRecord('sys_user_preference');
+gr.addEncodedQuery('user.active=false');
+gr.deleteMultiple();
